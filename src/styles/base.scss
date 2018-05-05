@@ -4,7 +4,7 @@ $color-neutral-base: #999 !default;
 $color-neutral-light: #ccc !default;
 $color-focus: #0490ef;
 
-$base-height: 40px !default;
+$base-height: 48px !default;
 
 $border-1: 1px solid $color-neutral-base;
 $border-2: 1px solid $color-neutral-light;
@@ -14,7 +14,7 @@ $border-radius-1: 5px !default;
 
 $field-border: $border-1;
 $field-border-focus: $border-color-focus;
-$field-height: 40px !default;
+$field-height: $base-height !default;
 $field-width: 280px;
 
 $list-border: $border-1;
@@ -26,7 +26,7 @@ $select-list-distance: 4px !default;
 $select-caret-color: $color-neutral-base;
 
 $button-width: 220px !default;
-$button-height: 44px !default;
+$button-height: $base-height !default;
 $button-inner-padding: 0 1rem;
 $button-border: $border-3;
 $button-border-radius: $border-radius-1;
