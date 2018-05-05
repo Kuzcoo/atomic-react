@@ -1,0 +1,29 @@
+@import './base.scss';
+
+.select {
+  position: relative;
+  width: $select-width;
+
+  &__caret {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    fill: $select-caret-color;
+    transform-origin: center;
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: calc(100% + #{$select-list-distance});
+  }
+
+  &.is-open > &__list {
+    display: block;
+    z-index: 2;
+  }
+
+  &.is-open > &__caret {
+    transform: rotate(180deg);
+  }
+}

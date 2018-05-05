@@ -1,0 +1,43 @@
+$color-neutral-darkest: #222 !default;
+$color-neutral-dark: #666 !default;
+$color-neutral-base: #999 !default;
+$color-neutral-light: #ccc !default;
+$color-focus: #0490ef;
+
+$base-height: 40px !default;
+
+$border-1: 1px solid $color-neutral-base;
+$border-2: 1px solid $color-neutral-light;
+$border-3: 1px solid transparent;
+$border-color-focus: $color-focus;
+$border-radius-1: 5px !default;
+
+$field-border: $border-1;
+$field-border-focus: $border-color-focus;
+$field-height: 40px !default;
+$field-width: 280px;
+
+$list-border: $border-1;
+
+$list-item-background-color: transparent !default;
+
+$select-width: 280px !default;
+$select-list-distance: 4px !default;
+$select-caret-color: $color-neutral-base;
+
+$button-width: 220px !default;
+$button-height: 44px !default;
+$button-inner-padding: 0 1rem;
+$button-border: $border-3;
+$button-border-radius: $border-radius-1;
+
+$button-primary-background-color: $color-neutral-dark;
+$button-primary-border-color: $button-primary-background-color;
+$button-primary-text-color: #fff;
+
+$button-secondary-background-color: transparent;
+$button-secondary-border-color: $color-neutral-dark;
+$button-secondary-text-color: $button-secondary-border-color;
+
+$button-ghost-text-color: $color-neutral-dark;
+

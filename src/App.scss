@@ -1,0 +1,20 @@
+.App {
+  width: 375px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.App > * {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.App > button {
+  display: block;
+  margin: 0 auto 1rem auto;
+
+  &:first-of-type {
+    margin-top: 2rem;
+  }
+}

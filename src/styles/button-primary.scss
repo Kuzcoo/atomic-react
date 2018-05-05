@@ -1,0 +1,7 @@
+@import './base.scss';
+
+.button-primary {
+  border-color: $button-primary-background-color;
+  color: $button-primary-text-color;
+  background-color: $button-primary-background-color;
+}

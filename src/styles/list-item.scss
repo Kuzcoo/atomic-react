@@ -1,0 +1,15 @@
+@import './base.scss';
+
+.list-item {
+  padding: 0 1rem;
+  border-bottom: $border-2;
+  height: $field-height;
+  text-align: left;
+  color: $color-neutral-darkest;
+  line-height: $field-height;
+  background-color: $list-item-background-color;
+
+  &:last-child {
+    border: 0;
+  }
+}

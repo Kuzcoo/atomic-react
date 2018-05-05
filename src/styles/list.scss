@@ -1,0 +1,9 @@
+@import './base.scss';
+
+.list {
+  list-style: none;
+  border: $list-border;
+  border-radius: $border-radius-1;
+  width: 100%;
+  background-color: #fff;
+}
