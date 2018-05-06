@@ -8,8 +8,23 @@
   color: $color-neutral-darkest;
   line-height: $field-height;
   background-color: $list-item-background-color;
+  cursor: pointer;
 
   &:last-child {
     border: 0;
+  }
+
+  &.is-focus {
+    background-color: $list-item-background-color-focus;
+  }
+
+  &.is-focus:first-child {
+    border-top-left-radius: $border-radius-1;
+    border-top-right-radius: $border-radius-1;
+  }
+
+  &.is-focus:last-child {
+    border-bottom-left-radius: $border-radius-1;
+    border-bottom-right-radius: $border-radius-1;
   }
 }

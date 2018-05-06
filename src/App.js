@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 import {Field} from './components/Field/Field';
 import {Select} from './components/Select/Select';
-import {listActions} from './components/Select/listActions';
+import {enhanceSelect} from './components/Select/enhanceSelect';
 import {ButtonPrimary} from './components/Buttons/ButtonPrimary';
 import {ButtonSecondary} from './components/Buttons/ButtonSecondary';
 import {ButtonGhost} from './components/Buttons/ButtonGhost';
@@ -20,8 +20,8 @@ const countries = [
   {name: 'Portugal'}
 ];
 
-const FruitSelect = listActions(Select);
-const CountryCombo = listActions(Select);
+const FruitSelect = enhanceSelect(Select);
+const CountrySelect = enhanceSelect(Select);
 
 class App extends Component {
   constructor() {
@@ -53,22 +53,29 @@ class App extends Component {
 
     return (
       <div className="App">
+
         <Field type='text' />
-        <FruitSelect 
+
+        <FruitSelect
+          id='fruit-select'
           value={fruitValue} 
           options={fruits} 
           defaultValue={'Choose a fruit'}
           onChooseItem={this.chooseFruit} />
-        <CountryCombo 
+
+        <CountrySelect
+          id='country-select'
+          combobox
           value={country} 
           options={countries} 
-          combo
           defaultValue='Choose a country'
-          onChangeValue={this.updateCountry}
+          onChange={this.updateCountry}
           onChooseItem={this.updateCountry} />
+
         <ButtonSecondary>Annuler</ButtonSecondary>
         <ButtonPrimary>Envoyer</ButtonPrimary>
         <ButtonGhost>Quitter</ButtonGhost>
+
       </div>
     );
   }

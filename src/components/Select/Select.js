@@ -7,8 +7,10 @@ import {CaretIcon} from '../Icons/CaretIcon';
 import './Select.scss';
 
 export function Select({
+  id,
   className,
   value,
+  activeDescendant,
   options, 
   defaultValue, 
   onClickList, 
@@ -16,25 +18,35 @@ export function Select({
   onChooseItem,
   onChangeValue,
   onKeyDown,
+  onFocus,
+  focusIndex,
+  isFocus,
   isOpen,
-  combo
+  combobox
 }) {
   return (
-    <div 
+    <div
+      id={id}
       className={'select' + (isOpen ? ' is-open' : '') + ' ' + className}
       onKeyDown={onKeyDown}
       onBlur={onBlurList}>
       <CaretIcon className='select__caret' />
       <Field 
         type='text' 
-        readonly={combo ? null : 'true'}
+        readonly={combobox ? null : 'true'}
         value={value} 
         placeholder={defaultValue}
-        onMouseDown={onClickList} 
+        aria-owns={`${id}-list`}
+        aria-activedescendant={activeDescendant}
+        onMouseDown={onClickList}
+        onFocus={onFocus}
         onChange={e => !!onChangeValue && onChangeValue(e.target.value)}/>
-      <List className='select__list'>
-        {options.map(option => (
+      <List id={`${id}-list`} className='select__list'>
+        {options.map( (option, i) => (
           <ListItem
+            key={`${id}-list-item-${i}`}
+            id={`${id}-list-item-${i}`}
+            className={(focusIndex === i ? 'is-focus' : '')}
             onMouseDown={() => onChooseItem(option.name)}>
             {option.name}
           </ListItem>
@@ -46,4 +58,11 @@ export function Select({
 
 Select.defaultProps = {
   className: ''
+};
+
+Select.propTypes = {
+  id: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  value: PropTypes.string,
+  activeDescendant: PropTypes.string.isRequired
 };

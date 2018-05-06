@@ -2,6 +2,7 @@ $color-neutral-darkest: #222 !default;
 $color-neutral-dark: #666 !default;
 $color-neutral-base: #999 !default;
 $color-neutral-light: #ccc !default;
+$color-neutral-lightest: #f4f4f4 !default;
 $color-focus: #0490ef;
 
 $base-height: 48px !default;
@@ -20,6 +21,7 @@ $field-width: 280px;
 $list-border: $border-1;
 
 $list-item-background-color: transparent !default;
+$list-item-background-color-focus: $color-neutral-lightest !default;
 
 $select-width: 280px !default;
 $select-list-distance: 4px !default;
